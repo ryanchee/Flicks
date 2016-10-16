@@ -21,18 +21,19 @@ The following **optional** features are implemented:
 - [X] Add a search bar.
 - [X] All images fade in.
 - [ ] For the large poster, load the low-res image first, switch to high-res when complete.
-- [ ] Customize the highlight and selection effect of the cell.
+- [X] Customize the highlight and selection effect of the cell.
 - [X] Customize the navigation bar.
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
+- [X] Search bar checks all occurrences of substring in movie title regardless
+  if capital or lowercase.
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://imgur.com/a/D46NT' title='Flicks' width='' alt='Flicks' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
@@ -41,11 +42,15 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 Describe any challenges encountered while building the app.
 **Please run on iphone 6 for formatting.**
 - 1. Time constraint. Had prior weekend plans before getting into codepath. I had to finish as much as possible by friday. (started wednesday)
+- 2. I realize the view controller has become massive. How do I do a better job
+     at separating the model from the view?
+- 3. I wanted to implement infinite scrolling to load more apps but that never
+     got completed because of time constraint.
 
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2016] [Ryan Chee]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -58,3 +63,7 @@ Describe any challenges encountered while building the app.
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
+
+## Acknowledgements
+
+   MBProgressHUD open source library used for displaying loading. 

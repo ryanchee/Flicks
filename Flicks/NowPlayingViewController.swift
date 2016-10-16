@@ -33,9 +33,6 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UITable
         let leftNavBarButton = UIBarButtonItem(customView:searchBar)
         self.navigationItem.leftBarButtonItem = leftNavBarButton
         moviesTableView.delegate = self
-        //if let navigationBar = navigationController?.navigationBar {
-        //    navigationBar.tintColor = UIColor(red: 1.0, green: 0.25, blue: 0.25, alpha: 0.8)
-        //}
         //self.searchBar.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(NowPlayingViewController.dismissKeyboard)))
         refreshControl.addTarget(self, action: #selector(refreshData(refreshControl:)), for: UIControlEvents.valueChanged)
         moviesTableView.insertSubview(refreshControl, at: 0)
@@ -117,13 +114,13 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UITable
         moviesTableView.reloadData()
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let scrollViewContentHeight = moviesTableView.contentSize.height
-        let scrollOffsetThreshold = scrollViewContentHeight - moviesTableView.bounds.size.height
-        if(scrollView.contentOffset.y > scrollOffsetThreshold) {
-        //    loadData()
-        }
-    }
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        let scrollViewContentHeight = moviesTableView.contentSize.height
+//        let scrollOffsetThreshold = scrollViewContentHeight - moviesTableView.bounds.size.height
+//        if(scrollView.contentOffset.y > scrollOffsetThreshold) {
+//        //    loadData()
+//        }
+//    }
     
     func refreshData(refreshControl: UIRefreshControl) {
         pageNumber = 1
@@ -147,6 +144,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UITable
                             })
                             self.networkIsGood = true
                         }
+                        self.moviesArray = self.getMoviesArray()
                         self.moviesTableView.reloadData()
                         refreshControl.endRefreshing()
                         MBProgressHUD.hide(for: self.moviesTableView, animated: true)
@@ -210,10 +208,10 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UITable
         return moviesArray
     }
     
-    func dismissKeyboard() {
-//        searchBar.resignFirstResponder()
-//        tapGestureView.resignFirstResponder()
-    }
+//    func dismissKeyboard() {
+////        searchBar.resignFirstResponder()
+////        tapGestureView.resignFirstResponder()
+//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as! MovieDetailsViewController
@@ -237,12 +235,4 @@ class MyCell: UITableViewCell {
     @IBOutlet weak var moviePosterImage: UIImageView!
     @IBOutlet weak var movieDescriptionLabel: UILabel!
     
-}
-
-class DetailViewController: UIViewController {
-    override func loadView() {
-        let view = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 0.0, height: 0.0))
-        view.backgroundColor = UIColor.green
-        self.view = view
-    }
 }
