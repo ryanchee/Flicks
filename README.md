@@ -32,10 +32,8 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-a
-<img alt="Flicks Gif" src="http://i.imgur.com/jfwOkuT.gifv"
-style="max-width: 100%; min-height: 589px;" original-title="Flicks">
 
+<img src="https://i.imgur.com/1AcVPLW.gif" style="width: 364px; height: 686px;">
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
