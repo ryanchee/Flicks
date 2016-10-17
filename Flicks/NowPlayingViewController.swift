@@ -50,10 +50,9 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = moviesTableView.dequeueReusableCell(withIdentifier: "com.ryanchee.exampleCell") as! MyCell
         let selectedBackgroundView = UIView()
-        selectedBackgroundView.backgroundColor = UIColor.orange
+        selectedBackgroundView.backgroundColor = UIColor(red: 1, green: 0.672, blue: 0.424, alpha: 1)
         cell.selectedBackgroundView = selectedBackgroundView
-        cell.contentView.backgroundColor = UIColor(red: 255, green: 197, blue: 108, alpha: 1)
-        //cell.contentView.backgroundColor = UIColor(red: 255, green: 197, blue: 108, alpha: 1)
+        cell.contentView.backgroundColor = UIColor(red: 1, green: 0.772, blue: 0.424, alpha: 1)
         if moviesArray.count > 0 {
             cell.customTextLabel?.text = moviesArray[indexPath.row].original_title
             if moviesArray[indexPath.row].poster_path != nil {
