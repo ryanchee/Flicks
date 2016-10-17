@@ -35,7 +35,6 @@ Here's a walkthrough of implemented user stories:
 
 <img alt="Flicks" src="//i.imgur.com/1AcVPLW.gif" style="max-width: 100%;
 min-height: 686px;" original-title="">
-
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
